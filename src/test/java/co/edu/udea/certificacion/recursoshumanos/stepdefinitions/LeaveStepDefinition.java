@@ -1,33 +1,43 @@
 package co.edu.udea.certificacion.recursoshumanos.stepdefinitions;
 
-import co.edu.udea.certificacion.recursoshumanos.questions.Leave;
-import co.edu.udea.certificacion.recursoshumanos.tasks.NavigateToLeave;
-import io.cucumber.java.en.*;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.And;
 import net.serenitybdd.screenplay.actors.OnStage;
+import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
+
+import co.edu.udea.certificacion.recursoshumanos.tasks.NavigateTo;
+import co.edu.udea.certificacion.recursoshumanos.questions.Leave;
 
 public class LeaveStepDefinition {
 
+    @Before
+    public void setup() {
+        OnStage.setTheStage(new OnlineCast());
+        OnStage.theActorCalled("user");
+    }
+
     @Given("que estoy en la página de {string}")
     public void queEstoyEnLaPaginaDe(String modulo) {
-        if (modulo.equalsIgnoreCase("Leave List")) {
-            OnStage.theActorInTheSpotlight().attemptsTo(
-                NavigateToLeave.go()
-            );
-        }
+        OnStage.theActorInTheSpotlight().attemptsTo(
+            NavigateTo.menuOption(modulo)
+        );
     }
 
     @When("la página se carga completamente")
     public void laPaginaSeCargaCompletamente() {
         OnStage.theActorInTheSpotlight().should(
-            seeThat("El título Leave List está visible", Leave.titleIsVisible(), is(true))
+            seeThat(Leave.titleIsVisible(), is(true))
         );
     }
 
-    @Then("debo ver los filtros {string}, {string}, {string}, {string}, {string}, {string}, e {string}")
-    public void deboVerLosFiltros(String f1, String f2, String f3, String f4, String f5, String f6, String f7) {
+    @Then("debo ver los filtros \"From Date\", \"To Date\", \"Show Leave with Status\", \"Leave Type\", \"Employee Name\", \"Sub Unit\", e \"Include Past Employees\"")
+    public void deboVerLosFiltros() {
         OnStage.theActorInTheSpotlight().should(
             seeThat(Leave.fromDateFilterIsVisible(), is(true))
         );
@@ -51,42 +61,25 @@ public class LeaveStepDefinition {
         );
     }
 
-    @And("debo ver las columnas de la tabla {string}, {string}, {string}, {string}, {string}, {string}, {string}, y {string}")
-    public void deboVerLasColumnasDeLaTabla(String c1, String c2, String c3, String c4, String c5, String c6, String c7, String c8) {
-        OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.dateColumnIsVisible(), is(true))
+    @And("debo ver las columnas de la tabla \"Date\", \"Employee Name\", \"Leave Type\", \"Leave Balance \\(Days\\)\", \"Number of Days\", \"Status\", \"Comments\", y \"Actions\"")
+    public void deboVerLasColumnasDeLaTabla() {
+         OnStage.theActorInTheSpotlight().should(
+         seeThat(Leave.tableHeadersAreVisible(), is(true))
         );
         OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.employeeNameColumnIsVisible(), is(true))
-        );
-        OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.leaveTypeColumnIsVisible(), is(true))
-        );
-        OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.leaveBalanceColumnIsVisible(), is(true))
-        );
-        OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.numberOfDaysColumnIsVisible(), is(true))
-        );
-        OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.statusColumnIsVisible(), is(true))
-        );
-        OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.commentsColumnIsVisible(), is(true))
-        );
-        OnStage.theActorInTheSpotlight().should(
-            seeThat(Leave.actionsColumnIsVisible(), is(true))
+         seeThat(Leave.tableRowsAreVisible(), is(true))
         );
     }
+
 
     @And("si no hay registros, debo ver el mensaje {string}")
     public void siNoHayRegistrosDeboVerElMensaje(String mensajeEsperado) {
         OnStage.theActorInTheSpotlight().should(
-            seeThat("Mensaje 'No Records Found' visible", Leave.noRecordsFoundMessageIsVisible(), is(true))
+            seeThat(Leave.noRecordsFoundMessageIsVisible(), is(true))
         );
 
         OnStage.theActorInTheSpotlight().should(
-            seeThat("Texto del mensaje", Leave.noRecordsFoundMessageText(), equalTo(mensajeEsperado))
+            seeThat(Leave.noRecordsFoundMessageText(), is(mensajeEsperado))
         );
     }
 }

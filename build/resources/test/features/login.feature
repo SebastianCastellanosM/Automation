@@ -27,6 +27,8 @@ Feature: Autenticacion en OrangeHRM
   | Directory    |
 
   Scenario: Navegar al módulo Leave y verificar su carga
-  Given que estoy autenticado en OrangeHRM
-  When navego al módulo "Leave"
-  Then debo ver el título de la página "Leave"
+    Given que estoy en la página de "Leave"
+    When la página se carga completamente
+    Then debo ver los filtros "From Date", "To Date", "Show Leave with Status", "Leave Type", "Employee Name", "Sub Unit", e "Include Past Employees"
+    And debo ver las columnas de la tabla "Date", "Employee Name", "Leave Type", "Leave Balance (Days)", "Number of Days", "Status", "Comments", y "Actions"
+    And si no hay registros, debo ver el mensaje "No Records Found"

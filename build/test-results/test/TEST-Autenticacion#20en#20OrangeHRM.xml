@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Autenticacion en OrangeHRM" tests="3" skipped="0" failures="3" errors="0" timestamp="2025-07-05T03:07:35.361Z" hostname="DESKTOP-8AFIBA1" time="44.351">
+<testsuite name="Autenticacion en OrangeHRM" tests="3" skipped="0" failures="3" errors="0" timestamp="2025-07-05T04:16:02.422Z" hostname="DESKTOP-8AFIBA1" time="43.164">
   <properties/>
-  <testcase name="Login exitoso con credenciales válidas" classname="Autenticacion en OrangeHRM" time="21.267">
+  <testcase name="Login exitoso con credenciales válidas" classname="Autenticacion en OrangeHRM" time="20.888">
     <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]" type="java.lang.AssertionError">java.lang.AssertionError: 
 Expected: an element that is visible
      but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]
@@ -18,7 +18,7 @@ Expected: an element that is visible
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:211)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
 	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ClickLoginButton.performAs(Login.java:51)
-	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ClickLoginButton$ByteBuddy$DRiFGzJn.performAs$accessor$BxcLjOZZ(Unknown Source)
+	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ClickLoginButton$ByteBuddy$4CVuW1pj.performAs$accessor$4ReVRpId(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -30,7 +30,7 @@ Expected: an element that is visible
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ClickLoginButton$ByteBuddy$DRiFGzJn.performAs(Unknown Source)
+	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ClickLoginButton$ByteBuddy$4CVuW1pj.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
@@ -39,7 +39,7 @@ Expected: an element that is visible
 	at ✽.hago clic en el boton &quot;Login&quot;(file:///D:/Proyectos%20UDEA/Automation2/src/test/resources/features/login.feature:11)
 </failure>
   </testcase>
-  <testcase name="Validar elementos del dashboard después del login" classname="Autenticacion en OrangeHRM" time="11.505">
+  <testcase name="Validar elementos del dashboard después del login" classname="Autenticacion en OrangeHRM" time="11.53">
     <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]" type="java.lang.AssertionError">java.lang.AssertionError: 
 Expected: an element that is visible
      but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]
@@ -56,7 +56,7 @@ Expected: an element that is visible
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:211)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
 	at co.edu.udea.certificacion.recursoshumanos.tasks.Login.performAs(Login.java:20)
-	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ByteBuddy$xvsWdbmo.performAs$accessor$5OuT2yel(Unknown Source)
+	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ByteBuddy$3SNqfLzL.performAs$accessor$DJ9AiJ0W(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -68,7 +68,7 @@ Expected: an element that is visible
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ByteBuddy$xvsWdbmo.performAs(Unknown Source)
+	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ByteBuddy$3SNqfLzL.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
@@ -77,10 +77,10 @@ Expected: an element that is visible
 	at ✽.ingreso credenciales validas y me autentico(file:///D:/Proyectos%20UDEA/Automation2/src/test/resources/features/login.feature:17)
 </failure>
   </testcase>
-  <testcase name="Navegar al módulo Leave y verificar su carga" classname="Autenticacion en OrangeHRM" time="11.577">
-    <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]" type="java.lang.AssertionError">java.lang.AssertionError: 
+  <testcase name="Navegar al módulo Leave y verificar su carga" classname="Autenticacion en OrangeHRM" time="10.746">
+    <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by [Leave menu option located with: //ul[contains(@class,'oxd-main-menu')]//li//span[normalize-space(text())='Leave']]" type="java.lang.AssertionError">java.lang.AssertionError: 
 Expected: an element that is visible
-     but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]
+     but: no matching element found by [Leave menu option located with: //ul[contains(@class,'oxd-main-menu')]//li//span[normalize-space(text())='Leave']]
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
 	at net.serenitybdd.screenplay.QuestionConsequence.evaluateFor(QuestionConsequence.java:49)
@@ -93,8 +93,8 @@ Expected: an element that is visible
 	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:254)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:211)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at co.edu.udea.certificacion.recursoshumanos.tasks.Login.performAs(Login.java:20)
-	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ByteBuddy$xvsWdbmo.performAs$accessor$5OuT2yel(Unknown Source)
+	at co.edu.udea.certificacion.recursoshumanos.tasks.NavigateTo.performAs(NavigateTo.java:25)
+	at co.edu.udea.certificacion.recursoshumanos.tasks.NavigateTo$ByteBuddy$ZobnVnPT.performAs$accessor$YPex68Xe(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -106,13 +106,13 @@ Expected: an element that is visible
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
 	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at co.edu.udea.certificacion.recursoshumanos.tasks.Login$ByteBuddy$xvsWdbmo.performAs(Unknown Source)
+	at co.edu.udea.certificacion.recursoshumanos.tasks.NavigateTo$ByteBuddy$ZobnVnPT.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at co.edu.udea.certificacion.recursoshumanos.stepdefinitions.DashboardStepDefinition.queEstoyAutenticadoEnOrangeHRM(DashboardStepDefinition.java:20)
-	at ✽.que estoy autenticado en OrangeHRM(file:///D:/Proyectos%20UDEA/Automation2/src/test/resources/features/login.feature:30)
+	at co.edu.udea.certificacion.recursoshumanos.stepdefinitions.LeaveStepDefinition.queEstoyEnLaPaginaDe(LeaveStepDefinition.java:27)
+	at ✽.que estoy en la página de &quot;Leave&quot;(file:///D:/Proyectos%20UDEA/Automation2/src/test/resources/features/login.feature:30)
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
@@ -126,9 +126,9 @@ Login exitoso con credenciales válidas(autenticacion-en-orangehrm;login-exitoso
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*, --disable-popup-blocking,--...], extensions: []}}
-jul. 04, 2025 10:07:40 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+jul. 04, 2025 11:16:07 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find CDP implementation matching 138
-jul. 04, 2025 10:07:40 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+jul. 04, 2025 11:16:07 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 ADVERTENCIA: Unable to find version of CDP to use for 138.0.7204.97. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] ERROR  - ?[91m
   _____   ___   ___   _____     ___     _     ___   _      ___   ___  
@@ -174,7 +174,7 @@ Navegar al módulo Leave y verificar su carga(autenticacion-en-orangehrm;navegar
 
 Navegar al módulo Leave y verificar su carga
 -----------------------------------------------------------------------?[0m
-[Test worker] ERROR  - ?[91m    Test failed at step: User login?[0m
-[Test worker] ERROR  - ?[91m    Expected: an element that is visible but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: User navigate to?[0m
+[Test worker] ERROR  - ?[91m    Expected: an element that is visible but: no matching element found by [Leave menu option located with: //ul[contains(@class,'oxd-main-menu')]//li//span[normalize-space(text())='Leave']]?[0m
 ]]></system-err>
 </testsuite>

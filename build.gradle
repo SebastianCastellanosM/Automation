@@ -58,3 +58,6 @@ tasks.named('test') {
     // System configs
 
 }
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

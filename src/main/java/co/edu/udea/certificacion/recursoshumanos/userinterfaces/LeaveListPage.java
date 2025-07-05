@@ -5,15 +5,14 @@ import org.openqa.selenium.By;
 
 public class LeaveListPage {
 
-    // Private constructor to prevent instantiation
     private LeaveListPage() {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 
+
     // ---------- TÍTULO DE LA PÁGINA ----------
     public static final Target LEAVE_LIST_TITLE = Target.the("Leave List title")
-        .located(By.xpath("//h6[text()='Leave List']"));
-
+            .located(By.xpath("//h6[text()='Leave List']"));
 
     // ---------- FILTROS PRINCIPALES ----------
     public static final Target FROM_DATE_FILTER = Target.the("From Date filter")
@@ -55,4 +54,29 @@ public class LeaveListPage {
 
     public static final Target FIRST_ROW_STATUS = Target.the("Status of first row")
             .located(By.xpath("(//div[@class='oxd-table-body']//div[contains(@class,'oxd-table-row')])[1]//div[6]"));
+
+    // ---------- COLUMNAS DE LA TABLA (ENCABEZADOS) ----------
+    public static final Target DATE_COLUMN = Target.the("Date column")
+            .located(By.xpath("//div[@role='columnheader' and .='Date']"));
+
+    public static final Target EMPLOYEE_NAME_COLUMN = Target.the("Employee Name column")
+            .located(By.xpath("//div[@role='columnheader' and .='Employee Name']"));
+
+    public static final Target LEAVE_TYPE_COLUMN = Target.the("Leave Type column")
+            .located(By.xpath("//div[@role='columnheader' and .='Leave Type']"));
+
+    public static final Target LEAVE_BALANCE_COLUMN = Target.the("Leave Balance (Days) column")
+            .located(By.xpath("//div[@role='columnheader' and .='Leave Balance (Days)']"));
+
+    public static final Target NUMBER_OF_DAYS_COLUMN = Target.the("Number of Days column")
+            .located(By.xpath("//div[@role='columnheader' and .='Number of Days']"));
+
+    public static final Target STATUS_COLUMN = Target.the("Status column")
+            .located(By.xpath("//div[@role='columnheader' and .='Status']"));
+
+    public static final Target COMMENTS_COLUMN = Target.the("Comments column")
+            .located(By.xpath("//div[@role='columnheader' and .='Comments']"));
+
+    public static final Target ACTIONS_COLUMN = Target.the("Actions column")
+            .located(By.xpath("//div[@role='columnheader' and .='Actions']"));
 }

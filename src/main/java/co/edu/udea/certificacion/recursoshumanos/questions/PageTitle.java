@@ -2,13 +2,19 @@ package co.edu.udea.certificacion.recursoshumanos.questions;
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
-import static co.edu.udea.certificacion.recursoshumanos.userinterfaces.DashboardPage.DASHBOARD_TITLE;
+import net.serenitybdd.screenplay.targets.Target;
+import org.openqa.selenium.By;
 
 public class PageTitle {
-    // Private constructor to prevent instantiation
-    private PageTitle() {}
+
+    private static final Target PAGE_TITLE = Target.the("Page title")
+        .located(By.xpath("//h6"));
+
+    private PageTitle() {
+        // Previene instanciación
+    }
 
     public static Question<Boolean> isVisibleWithText(String expectedTitle) {
-        return actor -> Text.of(DASHBOARD_TITLE).answeredBy(actor).equals(expectedTitle);
+        return actor -> Text.of(PAGE_TITLE).answeredBy(actor).equalsIgnoreCase(expectedTitle);
     }
 }
