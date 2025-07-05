@@ -56,7 +56,7 @@ public class LoginStepDefinition {
     @Then("debo estar autenticado y ver el dashboard")
     public void deboEstarAutenticadoYVerElDashboard() {
         OnStage.theActorInTheSpotlight().should(
-                seeThat("Dashboard should be visible", Dashboard.isVisible(), is(true))
+               seeThat("Dashboard should be visible", Dashboard.isVisible(), is(true))
         );
     }
 

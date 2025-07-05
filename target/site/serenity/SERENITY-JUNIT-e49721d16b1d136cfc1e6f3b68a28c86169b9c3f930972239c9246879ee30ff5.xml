@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="Autenticacion en OrangeHRM" skipped="0" tests="3" time="6.66" timestamp="2025-07-04 09:08:58"><testcase name="Login exitoso con credenciales válidas"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]" type="java.lang.AssertionError">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="Autenticacion en OrangeHRM" skipped="0" tests="3" time="8.2" timestamp="2025-07-04 10:07:35"><testcase name="Login exitoso con credenciales válidas"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]" type="java.lang.AssertionError">
 Expected: an element that is visible
      but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]</failure><system-err>
 Expected: an element that is visible
@@ -11,7 +11,7 @@ Expected: an element that is visible
      but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]</failure><system-err>
 Expected: an element that is visible
      but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]&#13;
-co.edu.udea.certificacion.recursoshumanos.tasks.Login.performAs(Login.java:25)&#13;
+co.edu.udea.certificacion.recursoshumanos.tasks.Login.performAs(Login.java:20)&#13;
 co.edu.udea.certificacion.recursoshumanos.stepdefinitions.LoginStepDefinition.ingresoCredencialesValidasYMeAutentico(LoginStepDefinition.java:72)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
@@ -20,7 +20,7 @@ Expected: an element that is visible
      but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]</failure><system-err>
 Expected: an element that is visible
      but: no matching element found by [Username field located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input]&#13;
-co.edu.udea.certificacion.recursoshumanos.tasks.Login.performAs(Login.java:25)&#13;
+co.edu.udea.certificacion.recursoshumanos.tasks.Login.performAs(Login.java:20)&#13;
 co.edu.udea.certificacion.recursoshumanos.stepdefinitions.DashboardStepDefinition.queEstoyAutenticadoEnOrangeHRM(DashboardStepDefinition.java:20)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;

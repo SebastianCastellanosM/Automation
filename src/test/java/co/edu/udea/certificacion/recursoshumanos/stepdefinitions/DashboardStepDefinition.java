@@ -11,7 +11,6 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import co.edu.udea.certificacion.recursoshumanos.questions.PageTitle;
 
 public class DashboardStepDefinition {
     @Given("que estoy autenticado en OrangeHRM")

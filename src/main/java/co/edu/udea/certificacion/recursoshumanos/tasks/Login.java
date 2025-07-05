@@ -15,11 +15,6 @@ public class Login implements Task {
     private final String username;
     private final String password;
 
-    public Login(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
@@ -31,6 +26,11 @@ public class Login implements Task {
         Click.on(LOGIN_BUTTON)
     );
 
+    }
+
+    public Login(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
     public static Login withCredentials(String username, String password) {
