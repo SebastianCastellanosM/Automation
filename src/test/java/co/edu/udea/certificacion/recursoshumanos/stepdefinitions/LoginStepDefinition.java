@@ -10,8 +10,10 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.is;
+
 
 import co.edu.udea.certificacion.recursoshumanos.tasks.Login;
 import co.edu.udea.certificacion.recursoshumanos.questions.Dashboard;
@@ -38,10 +40,11 @@ public class LoginStepDefinition {
 
     @When("ingreso el usuario {string} y la contrasena {string}")
     public void ingresoElUsuarioYLaContrasena(String usuario, String contrasena) {
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                Login.withCredentials(usuario, contrasena)
-        );
-    }
+    OnStage.theActorInTheSpotlight().attemptsTo(
+        Login.withCredentials(usuario, contrasena)
+    );
+}
+
 
     @When("hago clic en el boton {string}")
     public void hagoClicEnElBoton(String boton) {
@@ -53,7 +56,7 @@ public class LoginStepDefinition {
     @Then("debo estar autenticado y ver el dashboard")
     public void deboEstarAutenticadoYVerElDashboard() {
         OnStage.theActorInTheSpotlight().should(
-                seeThat("Dashboard should be visible", Dashboard.visibility(), is(true))
+                seeThat("Dashboard should be visible", Dashboard.isVisible(), is(true))
         );
     }
 

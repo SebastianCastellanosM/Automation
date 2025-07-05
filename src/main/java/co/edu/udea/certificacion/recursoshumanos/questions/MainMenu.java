@@ -7,6 +7,11 @@ import static co.edu.udea.certificacion.recursoshumanos.userinterfaces.Dashboard
 
 public class MainMenu {
 
+    // Private constructor to prevent instantiation
+    private MainMenu() {
+        throw new UnsupportedOperationException("Utility class");
+    }
+
     public static Question<Boolean> hasOption(String optionText) {
         return Question.about("the presence of the menu option: " + optionText)
                 .answeredBy(actor -> Visibility.of(MAIN_MENU.of(optionText)).answeredBy(actor));

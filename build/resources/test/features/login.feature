@@ -25,3 +25,8 @@ Feature: Autenticacion en OrangeHRM
   | Performance  |
   | Dashboard    |
   | Directory    |
+
+  Scenario: Navegar al módulo Leave y verificar su carga
+  Given que estoy autenticado en OrangeHRM
+  When navego al módulo "Leave"
+  Then debo ver el título de la página "Leave"
