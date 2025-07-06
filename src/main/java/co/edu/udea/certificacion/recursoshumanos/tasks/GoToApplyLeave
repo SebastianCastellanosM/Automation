@@ -1,0 +1,14 @@
+public class GoToApplyLeave implements Task {
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+            WaitUntil.the(APPLY_LEAVE_MENU, isVisible()).forNoMoreThan(10).seconds(),
+            Click.on(APPLY_LEAVE_MENU)
+        );
+    }
+
+    public static GoToApplyLeave applyLeave() {
+        return Tasks.instrumented(GoToApplyLeave.class);
+    }
+}

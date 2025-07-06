@@ -8,11 +8,14 @@ import org.openqa.selenium.By;
 public class DashboardPage extends PageObject {
 
     // ---------- HEADER ELEMENTS ----------
-    public static final Target DASHBOARD_TITLE = Target.the("Dashboard title")
+   public static final Target DASHBOARD_TITLE = Target.the("Dashboard title")
     .located(By.xpath("//*[@id='app']/div[1]/div[1]/header/div[1]/div[1]/span/h6"));
 
     public static final Target DASHBOARD_LOGO_IMAGE = Target.the("Dashboard logo image")
     .locatedBy("//*[@id='app']/div[1]/div[1]/aside/nav/div[1]/a/div[2]/img");
+
+    public static Target MAIN_MENU = Target.the("Main menu option")
+    .locatedBy("//ul[contains(@class,'oxd-main-menu')]//li//span[text()='{0}']");
 
     
     public static final Target USER_PROFILE_DROPDOWN = Target.the("User profile dropdown")
@@ -24,9 +27,6 @@ public class DashboardPage extends PageObject {
     public static final Target UPGRADE_BUTTON = Target.the("Upgrade button")
         .locatedBy("//button[contains(text(),'Upgrade')]");
 
-    // ---------- SIDEBAR MENU OPTIONS ----------
-    public static final Target MAIN_MENU = Target.the("Main menu option")
-        .locatedBy("//ul[contains(@class,'oxd-main-menu')]//li//span[normalize-space(text())='{0}']");
 
     // Opciones específicas del menú principal
     public static final Target ADMIN_MENU = Target.the("Admin menu")

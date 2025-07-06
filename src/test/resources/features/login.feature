@@ -32,3 +32,9 @@ Feature: Autenticacion en OrangeHRM
     Then debo ver los filtros "From Date", "To Date", "Show Leave with Status", "Leave Type", "Employee Name", "Sub Unit", e "Include Past Employees"
     And debo ver las columnas de la tabla "Date", "Employee Name", "Leave Type", "Leave Balance (Days)", "Number of Days", "Status", "Comments", y "Actions"
     And si no hay registros, debo ver el mensaje "No Records Found"
+
+  Scenario: Filtrar por tipo de licencia y validar resultados
+  Given que estoy en la página de "Leave"
+  When selecciono el tipo de licencia "CAN - Vacation"
+  And hago clic en el botón "Search"
+  Then debo ver resultados en la tabla de licencias

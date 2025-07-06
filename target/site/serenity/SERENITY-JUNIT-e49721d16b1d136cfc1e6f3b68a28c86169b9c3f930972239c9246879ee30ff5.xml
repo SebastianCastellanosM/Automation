@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="Autenticacion en OrangeHRM" skipped="0" tests="3" time="17.69" timestamp="2025-07-04 11:16:03"><testcase name="Login exitoso con credenciales válidas"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]" type="java.lang.AssertionError">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="4" name="Autenticacion en OrangeHRM" skipped="0" tests="4" time="13.65" timestamp="2025-07-06 05:19:50"><testcase name="Login exitoso con credenciales válidas"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]" type="java.lang.AssertionError">
 Expected: an element that is visible
      but: no matching element found by [Login button located with: xpath: //*[@id='app']/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button]</failure><system-err>
 Expected: an element that is visible
@@ -15,13 +15,22 @@ co.edu.udea.certificacion.recursoshumanos.tasks.Login.performAs(Login.java:20)&#
 co.edu.udea.certificacion.recursoshumanos.stepdefinitions.LoginStepDefinition.ingresoCredencialesValidasYMeAutentico(LoginStepDefinition.java:72)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
-</system-err></testcase><testcase name="Navegar al módulo Leave y verificar su carga"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by [Leave menu option located with: //ul[contains(@class,'oxd-main-menu')]//li//span[normalize-space(text())='Leave']]" type="java.lang.AssertionError">
-Expected: an element that is visible
-     but: no matching element found by [Leave menu option located with: //ul[contains(@class,'oxd-main-menu')]//li//span[normalize-space(text())='Leave']]</failure><system-err>
-Expected: an element that is visible
-     but: no matching element found by [Leave menu option located with: //ul[contains(@class,'oxd-main-menu')]//li//span[normalize-space(text())='Leave']]&#13;
-co.edu.udea.certificacion.recursoshumanos.tasks.NavigateTo.performAs(NavigateTo.java:25)&#13;
-co.edu.udea.certificacion.recursoshumanos.stepdefinitions.LeaveStepDefinition.queEstoyEnLaPaginaDe(LeaveStepDefinition.java:27)&#13;
+</system-err></testcase><testcase name="Navegar al módulo Leave y verificar su carga"><failure message="&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;</failure><system-err>
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;&#13;
+co.edu.udea.certificacion.recursoshumanos.stepdefinitions.LeaveStepDefinition.laPaginaSeCargaCompletamente(LeaveStepDefinition.java:38)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Filtrar por tipo de licencia y validar resultados"><failure message="Expected condition failed: waiting for By.xpath: //button[@type='submit' and .='Search'] to be present (tried for 15 second(s) with 100 milliseconds interval)&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.27'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException">Expected condition failed: waiting for By.xpath: //button[@type='submit' and .='Search'] to be present (tried for 15 second(s) with 100 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.27'
+Driver info: driver.version: unknown</failure><system-err>Expected condition failed: waiting for By.xpath: //button[@type='submit' and .='Search'] to be present (tried for 15 second(s) with 100 milliseconds interval)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.27'
+Driver info: driver.version: unknown&#13;
+co.edu.udea.certificacion.recursoshumanos.stepdefinitions.LeaveStepDefinition.hagoClicEnElBoton(LeaveStepDefinition.java:85)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
 </system-err></testcase></testsuite>

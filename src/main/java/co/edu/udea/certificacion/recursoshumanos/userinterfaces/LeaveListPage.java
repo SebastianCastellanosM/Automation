@@ -12,7 +12,7 @@ public class LeaveListPage {
 
     // ---------- TÍTULO DE LA PÁGINA ----------
     public static final Target LEAVE_LIST_TITLE = Target.the("Leave List title")
-            .located(By.xpath("//h6[text()='Leave List']"));
+            .located(By.xpath("//h6[text()='Leave']"));
 
     // ---------- FILTROS PRINCIPALES ----------
     public static final Target FROM_DATE_FILTER = Target.the("From Date filter")
@@ -79,4 +79,10 @@ public class LeaveListPage {
 
     public static final Target ACTIONS_COLUMN = Target.the("Actions column")
             .located(By.xpath("//div[@role='columnheader' and .='Actions']"));
+    public static final Target TABLE = Target.the("Leave results table")
+        .located(By.xpath("//div[@class='oxd-table']"));
+
+     public static final Target PAGINATION = Target.the("Table pagination section")
+        .located(By.xpath("//nav[@class='oxd-pagination']"));
+
 }
